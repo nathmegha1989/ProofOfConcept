@@ -15,6 +15,15 @@
 		C3440F2425596E1200142936 /* ProofOfConceptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F2325596E1200142936 /* ProofOfConceptTests.swift */; };
 		C3440F2F25596E1300142936 /* ProofOfConceptUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F2E25596E1300142936 /* ProofOfConceptUITests.swift */; };
 		C3440F4E2559755300142936 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F4D2559755300142936 /* ViewController.swift */; };
+		C3440F5025597B7700142936 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F4F25597B7700142936 /* Fact.swift */; };
+		C3440F5325598CA600142936 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F5225598CA600142936 /* RequestRouter.swift */; };
+		C3440F5525598CB400142936 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F5425598CB400142936 /* RequestService.swift */; };
+		C3440F5725598CC300142936 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F5625598CC300142936 /* RequestHandler.swift */; };
+		C3440F592559939A00142936 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F582559939A00142936 /* Reachability.swift */; };
+		C3440F5C2559946D00142936 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F5B2559946D00142936 /* Result.swift */; };
+		C3440F5E2559948400142936 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F5D2559948400142936 /* ErrorResult.swift */; };
+		C3440F61255994C900142936 /* ParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F60255994C900142936 /* ParserHelper.swift */; };
+		C3440F63255995A800142936 /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3440F62255995A800142936 /* FactService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		C3440F2E25596E1300142936 /* ProofOfConceptUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProofOfConceptUITests.swift; sourceTree = "<group>"; };
 		C3440F3025596E1300142936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3440F4D2559755300142936 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3440F4F25597B7700142936 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		C3440F5225598CA600142936 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		C3440F5425598CB400142936 /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		C3440F5625598CC300142936 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		C3440F582559939A00142936 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		C3440F5B2559946D00142936 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C3440F5D2559948400142936 /* ErrorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
+		C3440F60255994C900142936 /* ParserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserHelper.swift; sourceTree = "<group>"; };
+		C3440F62255995A800142936 /* FactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +160,7 @@
 		C3440F492559753700142936 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3440F4F25597B7700142936 /* Fact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +168,7 @@
 		C3440F4A2559753700142936 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3440F582559939A00142936 /* Reachability.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -156,6 +176,10 @@
 		C3440F4B2559753700142936 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C3440F5F255994BE00142936 /* Parser */,
+				C3440F5A2559945C00142936 /* Result */,
+				C3440F5125598C6C00142936 /* Network */,
+				C3440F62255995A800142936 /* FactService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -166,6 +190,33 @@
 				C3440F4D2559755300142936 /* ViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C3440F5125598C6C00142936 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C3440F5225598CA600142936 /* RequestRouter.swift */,
+				C3440F5425598CB400142936 /* RequestService.swift */,
+				C3440F5625598CC300142936 /* RequestHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C3440F5A2559945C00142936 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				C3440F5B2559946D00142936 /* Result.swift */,
+				C3440F5D2559948400142936 /* ErrorResult.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		C3440F5F255994BE00142936 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				C3440F60255994C900142936 /* ParserHelper.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +350,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3440F5C2559946D00142936 /* Result.swift in Sources */,
+				C3440F5E2559948400142936 /* ErrorResult.swift in Sources */,
+				C3440F5725598CC300142936 /* RequestHandler.swift in Sources */,
 				C3440F4E2559755300142936 /* ViewController.swift in Sources */,
+				C3440F5525598CB400142936 /* RequestService.swift in Sources */,
+				C3440F5325598CA600142936 /* RequestRouter.swift in Sources */,
 				C3440F0D25596E1000142936 /* AppDelegate.swift in Sources */,
+				C3440F63255995A800142936 /* FactService.swift in Sources */,
 				C3440F0F25596E1000142936 /* SceneDelegate.swift in Sources */,
+				C3440F61255994C900142936 /* ParserHelper.swift in Sources */,
+				C3440F592559939A00142936 /* Reachability.swift in Sources */,
+				C3440F5025597B7700142936 /* Fact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
