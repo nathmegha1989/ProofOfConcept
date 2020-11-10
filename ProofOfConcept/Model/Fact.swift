@@ -23,13 +23,13 @@ extension Fact : Parceable {
     
     static func parseObject(dictionary: [String : AnyObject]) -> Result<Fact, ErrorResult> {
         if let title = dictionary["title"] as? String,
-          let rows = dictionary["rows"] as? [[String: String]] {
+          let rows = dictionary["rows"] as? NSArray as? [[String:Any]]{
           var facts : [FactRow] = []
           for item in rows {
             if let rowTitle = item["title"],
               let description = item["description"],
               let imageHref = item["imageHref"] {
-              let factRow = FactRow(title: rowTitle, description: description, imageHref: imageHref)
+              let factRow = FactRow(title: rowTitle as? String, description: description as? String, imageHref: imageHref as? String)
               facts.append(factRow)
             }
           }

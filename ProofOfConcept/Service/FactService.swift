@@ -9,6 +9,7 @@
 import Foundation
 protocol FactServiceProtocol : class {
     func fetchFacts(_ completion: @escaping ((Result<Fact, ErrorResult>) -> Void))
+
 }
 
 final class FactService : RequestHandler, FactServiceProtocol {

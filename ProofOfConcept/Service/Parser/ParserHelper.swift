@@ -53,8 +53,8 @@ final class ParserHelper {
     static func parse<T: Parceable>(data: Data, completion : (Result<T, ErrorResult>) -> Void) {
         
         do {
-            
-            if let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: AnyObject] {
+          if let utf8Data = String(decoding: data, as: UTF8.self).data(using: .utf8){
+            if let dictionary = try JSONSerialization.jsonObject(with: utf8Data, options: .allowFragments) as? [String: AnyObject] {
                 
                 // init final result
                 // check foreach dictionary if parseable
@@ -66,9 +66,9 @@ final class ParserHelper {
                     completion(.success(newModel))
                     break
                 }
-                
-                
-            } else {
+            }
+          }
+             else {
                 // not an array
                 completion(.failure(.parser(string: "Json data is not an array")))
             }
